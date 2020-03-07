@@ -17,3 +17,6 @@ hosts:
 ## Related 
 * [zsh-portable](https://github.com/xxh/zsh-portable)
 * [zsh.org / Portable rootless ZSH](https://www.zsh.org/mla/workers/2019/msg00866.html)
+
+## Thanks
+* Bart Schaefer from Zsh Mailing List
