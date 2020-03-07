@@ -10,7 +10,7 @@ xxh myhost +s xxh-shell-zsh
 To avoid adding `+s` every time use xxh config in `~/.xxh/.xxhc`:
 ```
 hosts:
-  myhost:
+  ".*":                     # Regex for all hosts
     +s: xxh-shell-zsh
 ```
 
