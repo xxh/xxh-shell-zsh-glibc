@@ -23,9 +23,10 @@ if [[ ! -f .check-done ]]; then
   echo $check_result > .check-done
 fi
 
+export XXH_HOME=`realpath $CURRENT_DIR/../../../..`
 export ZDOTDIR=$CURRENT_DIR
 export PATH=$CURRENT_DIR:$PATH
 export ZSH_DISABLE_COMPFIX=true
 
-./zsh -fc 'typeset -p fpath' | sed "s,./run,$CURRENT_DIR,g" > etc/zshenv
+./zsh -fc 'typeset -p fpath' | sed "s,./run,$CURRENT_DIR,g" > .zshenv
 cd && $CURRENT_DIR/zsh # TODO: $EXECUTE_FILE $EXECUTE_COMMAND $VERBOSE

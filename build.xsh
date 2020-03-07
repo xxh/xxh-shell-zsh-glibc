@@ -16,6 +16,7 @@ rm -rf @(build_dir)/
 mkdir -p @(build_dir)
 
 cp @(script_dir / 'entrypoint.sh') @(build_dir)/
+cp @(script_dir / '.zshrc') @(build_dir)/
 
 cd @(build_dir)
 
