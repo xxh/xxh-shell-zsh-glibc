@@ -25,4 +25,4 @@ fi
 
 
 ./zsh -fc 'typeset -p fpath' | sed "s,./run,$CURRENT_DIR,g" > etc/zshenv
-./zsh # TODO: $EXECUTE_FILE $EXECUTE_COMMAND $VERBOSE
+cd && $CURRENT_DIR/zsh # TODO: $EXECUTE_FILE $EXECUTE_COMMAND $VERBOSE
