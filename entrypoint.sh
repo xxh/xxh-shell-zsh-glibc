@@ -14,13 +14,14 @@ CURRENT_DIR="$(cd "$(dirname "$0")" && pwd)"
 cd $CURRENT_DIR
 
 # Check
-check_result=`./zsh --version 2>&1`
 if [[ ! -f .check-done ]]; then
-  if [[ $check_result == *"error"* ]]; then
+  check_result=`./zsh --version 2>&1`
+  if [[ $check_result != *"zsh "* ]]; then
     echo "Something went wrong while running zsh on host:"
     echo $check_result
+  else
+    echo $check_result > .check-done
   fi
-  echo $check_result > .check-done
 fi
 
 export XXH_HOME=`realpath $CURRENT_DIR/../../../..`
@@ -30,4 +31,4 @@ export ZSH_DISABLE_COMPFIX=true
 export HISTFILE=$XXH_HOME/.zsh_history
 
 ./zsh -fc 'typeset -p fpath' | sed "s,./run,$CURRENT_DIR,g" > .zshenv
-cd && $CURRENT_DIR/zsh # TODO: $EXECUTE_FILE $EXECUTE_COMMAND $VERBOSE
+./zsh # TODO: $EXECUTE_FILE $EXECUTE_COMMAND $VERBOSE
