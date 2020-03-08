@@ -1,4 +1,4 @@
-Xxh entrypoint for portable zsh shell. 
+[Xxh](https://github.com/xxh/xxh) entrypoint for [zsh-portable](https://github.com/xxh/zsh-portable). 
 
 ## Install
 ```
