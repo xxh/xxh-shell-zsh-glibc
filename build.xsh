@@ -36,7 +36,7 @@ if not p'zsh'.is_file():
         eprint('Please install wget or curl and try again. Howto: https://duckduckgo.com/?q=how+to+install+wget+in+linux')
         exit(1)
 
-    tar -xvzf @(zsh_arch)
+    tar -xzf @(zsh_arch)
     rm @(zsh_arch)
 else:
     eprint(f'File {zsh_arch} exists. Skip downloading')
