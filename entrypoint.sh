@@ -25,10 +25,5 @@ if [[ ! -f .check-done ]]; then
 fi
 
 export XXH_HOME=`realpath $CURRENT_DIR/../../../..`
-export ZDOTDIR=$CURRENT_DIR
-export PATH=$CURRENT_DIR:$PATH
-export ZSH_DISABLE_COMPFIX=true
 export HISTFILE=$XXH_HOME/.zsh_history
-
-./zsh -fc 'typeset -p fpath' | sed "s,./run,$CURRENT_DIR,g" > .zshenv
-./zsh # TODO: $EXECUTE_FILE $EXECUTE_COMMAND $VERBOSE
+./zsh.sh # TODO: $EXECUTE_FILE $EXECUTE_COMMAND $VERBOSE
