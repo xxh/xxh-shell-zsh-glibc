@@ -1,6 +1,11 @@
 [Xxh](https://github.com/xxh/xxh) entrypoint for [zsh-portable](https://github.com/xxh/zsh-portable). 
 
 ## Install
+Install from xxh repo:
+```
+xxhp i xxh-shell-zsh
+```
+Install from any repo:
 ```
 cd ~/.xxh/xxh/shells/
 git clone https://github.com/xxh/xxh-shell-zsh
