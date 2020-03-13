@@ -15,6 +15,6 @@ for pluginrc_file in $CURRENT_DIR/../../../plugins/**/*-zsh-*/build/pluginrc.zsh
   fi
 done
 
-compinit -d $XXH_HOME/zcompdump-$ZSH_VERSION
+compinit -d $XXH_HOME/.zcompdump-$ZSH_VERSION
 
 cd ~
