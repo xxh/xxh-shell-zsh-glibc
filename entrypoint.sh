@@ -33,7 +33,7 @@ for env in "${ENV[@]}"; do
   val=`echo $val | base64 -d`
 
   if [[ $XXH_VERBOSE == '1' ]]; then
-    echo Environment variable "$env": name=$name, value=$val
+    echo Entrypoint env: raw="$env", name=$name, value=$val
   fi
 
   export $name="$val"
