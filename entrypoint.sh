@@ -43,13 +43,13 @@ CURRENT_DIR="$(cd "$(dirname "$0")" && pwd)"
 cd $CURRENT_DIR
 
 # Check
-if [[ ! -f .check-done ]]; then
+if [[ ! -f .entrypoint-check-done ]]; then
   check_result=`./zsh.sh --version 2>&1`
   if [[ $check_result != *"zsh "* ]]; then
     echo "Something went wrong while running zsh on host:"
     echo $check_result
   else
-    echo $check_result > .check-done
+    echo $check_result > .entrypoint-check-done
   fi
 fi
 
