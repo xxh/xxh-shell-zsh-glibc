@@ -5,6 +5,7 @@ if [[ $XXH_VERBOSE != '2' ]]; then
   alias awk='awk $@ 2> >(grep -v "no version information available")'
 fi
 
+setopt +o nomatch
 for pluginrc_file in $CURRENT_DIR/../../../plugins/**/*-zsh-*/build/pluginrc.zsh; do
   if [[ -f $pluginrc_file ]]; then
     if [[ $XXH_VERBOSE == '1' ]]; then
@@ -14,6 +15,7 @@ for pluginrc_file in $CURRENT_DIR/../../../plugins/**/*-zsh-*/build/pluginrc.zsh
     source $pluginrc_file
   fi
 done
+setopt -o nomatch
 
 compinit -d $XXH_HOME/.zcompdump-$ZSH_VERSION
 
