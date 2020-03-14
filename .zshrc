@@ -17,6 +17,8 @@ for pluginrc_file in $CURRENT_DIR/../../../plugins/**/*-zsh-*/build/pluginrc.zsh
 done
 setopt -o nomatch
 
-compinit -d $XXH_HOME/.zcompdump-$ZSH_VERSION
+if [[ -f compinit ]]; then
+    compinit -d $XXH_HOME/.zcompdump-$ZSH_VERSION
+fi
 
 cd ~
