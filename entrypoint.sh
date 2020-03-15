@@ -17,7 +17,7 @@ if [[ $VERBOSE != '' ]]; then
 fi
 
 if [[ $EXECUTE_COMMAND ]]; then
-  if [[ $XXH_VERBOSE == '1' ]]; then
+  if [[ $XXH_VERBOSE == '1' || $XXH_VERBOSE == '2' ]]; then
     echo Execute command: $EXECUTE_COMMAND
   fi
 
@@ -33,7 +33,7 @@ for env in "${ENV[@]}"; do
   val="$( cut -d '=' -f 2- <<< "$env" )";
   val=`echo $val | base64 -d`
 
-  if [[ $XXH_VERBOSE == '1' ]]; then
+  if [[ $XXH_VERBOSE == '1' || $XXH_VERBOSE == '2' ]]; then
     echo Entrypoint env: raw="$env", name=$name, value=$val
   fi
 
@@ -43,7 +43,7 @@ done
 for eb in "${EBASH[@]}"; do
   bash_command=`echo $eb | base64 -d`
 
-  if [[ $XXH_VERBOSE == '1' ]]; then
+  if [[ $XXH_VERBOSE == '1' || $XXH_VERBOSE == '2' ]]; then
     echo Entrypoint bash execute: $bash_command
   fi
   eval $bash_command
