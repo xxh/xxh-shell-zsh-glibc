@@ -9,7 +9,7 @@ Install from any repo:
 ```
 cd ~/.xxh/xxh/shells/
 git clone https://github.com/xxh/xxh-shell-zsh
-./xxh-shell-zsh/build.xsh
+./xxh-shell-zsh/build.sh
 xxh myhost +s xxh-shell-zsh
 ```
 To avoid adding `+s` every time use xxh config in `~/.xxh/.xxhc`:
