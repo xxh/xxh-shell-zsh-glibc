@@ -3,20 +3,21 @@
 ## Install
 Install from xxh repo:
 ```
-xxhp i xxh-shell-zsh
+xxh +I zsh
 ```
 Install from any repo:
 ```
-cd ~/.xxh/xxh/shells/
-git clone https://github.com/xxh/xxh-shell-zsh
-./xxh-shell-zsh/build.sh
-xxh myhost +s xxh-shell-zsh
+xxh +I xxh-shell-zsh+git+https://github.com/xxh/xxh-shell-zsh
+```
+Connect:
+```
+xxh myhost +s zsh
 ```
 To avoid adding `+s` every time use xxh config in `~/.config/xxh/config.xxhc` (`$XDG_CONFIG_HOME`):
 ```
 hosts:
   ".*":                     # Regex for all hosts
-    +s: xxh-shell-zsh
+    +s: zsh
 ```
 
 ## Plugins
