@@ -12,7 +12,7 @@ git clone https://github.com/xxh/xxh-shell-zsh
 ./xxh-shell-zsh/build.sh
 xxh myhost +s xxh-shell-zsh
 ```
-To avoid adding `+s` every time use xxh config in `~/.xxh/.xxhc`:
+To avoid adding `+s` every time use xxh config in `~/.config/xxh/config.xxhc` (`$XDG_CONFIG_HOME`):
 ```
 hosts:
   ".*":                     # Regex for all hosts
