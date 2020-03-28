@@ -3,21 +3,21 @@
 ## Install
 Install from xxh repo:
 ```
-xxh +I zsh
+xxh +I zsh-glibc
 ```
 Install from any repo:
 ```
-xxh +I xxh-shell-zsh+git+https://github.com/xxh/xxh-shell-zsh
+xxh +I xxh-shell-zsh-glibc+git+https://github.com/xxh/xxh-shell-zsh-glibc
 ```
 Connect:
 ```
-xxh myhost +s zsh
+xxh myhost +s zsh-glibc
 ```
 To avoid adding `+s` every time use xxh config in `~/.config/xxh/config.xxhc` (`$XDG_CONFIG_HOME`):
 ```
 hosts:
   ".*":                     # Regex for all hosts
-    +s: zsh
+    +s: zsh-glibc
 ```
 
 ## Plugins
